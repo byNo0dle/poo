@@ -7,14 +7,34 @@ public class Alumno {
   private String apellidos;
 
   /**
-   * Se implemento este método
+   * Esto es un constructor vacio.
+   */
+  public Alumno() {
+  }
+
+  /**
+   * Esto es un constructor con parametros.
+   *
+   * @param alumnoId
+   * @param nombres
+   * @param apellidos
+   */
+  public Alumno(Integer alumnoId, String nombres, String apellidos) {
+    this.alumnoId = alumnoId;
+    this.nombres = nombres;
+    this.apellidos = apellidos;
+  }
+
+  /**
+   * Se implemento este método.
    */
   public void mostrarNombre() {
     System.out.println("Hola, soy un alumno y se decir mi nombre");
   }
 
   /**
-   * Se implento este método
+   * Se implemento este método.
+   *
    * @param calificacion
    */
   public void saberAprobado(Double calificacion) {
