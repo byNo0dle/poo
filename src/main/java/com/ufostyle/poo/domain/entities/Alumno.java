@@ -25,6 +25,30 @@ public class Alumno {
     this.apellidos = apellidos;
   }
 
+  public Integer getAlumnoId() {
+    return alumnoId;
+  }
+
+  public void setAlumnoId(Integer alumnoId) {
+    this.alumnoId = alumnoId;
+  }
+
+  public String getNombres() {
+    return nombres;
+  }
+
+  public void setNombres(String nombres) {
+    this.nombres = nombres;
+  }
+
+  public String getApellidos() {
+    return apellidos;
+  }
+
+  public void setApellidos(String apellidos) {
+    this.apellidos = apellidos;
+  }
+
   /**
    * Se implemento este método.
    */
