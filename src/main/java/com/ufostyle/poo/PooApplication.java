@@ -3,6 +3,8 @@ package com.ufostyle.poo;
 import com.ufostyle.poo.domain.entities.Alumno;
 import com.ufostyle.poo.domain.herencia.Consultor;
 import com.ufostyle.poo.domain.herencia.Empleado;
+import com.ufostyle.poo.domain.herencia.Persona;
+import com.ufostyle.poo.domain.polimorfismo.Jefe;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -36,13 +38,24 @@ public class PooApplication {
 		System.out.println("El nombre del alumno es: " + alu2.getNombres());
 		System.out.println("El apellido del alumno es: " + alu2.getApellidos());*/
 
-		Empleado emple = new Empleado();
+		/*Empleado emple = new Empleado();
 		emple.getNum_legajo();
 		emple.getNombres();
 
 		Consultor consul = new Consultor();
 		consul.getNum_consultor();
-		consul.getNombres();
+		consul.getNombres();*/
+
+		Persona vector [] = new Persona[5];
+		vector [0] = new Persona();
+		vector [1] = new Empleado();
+		vector [2] = new Consultor();
+		vector [3] = new Jefe();
+
+		Persona perso = new Persona();
+		Consultor consul = new Consultor();
+
+		perso = consul;
 	}
 
 }
