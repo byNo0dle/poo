@@ -1,6 +1,6 @@
 package com.ufostyle.poo;
 
-import com.ufostyle.poo.domain.entities.Alumno;
+import com.ufostyle.poo.domain.entities.*;
 import com.ufostyle.poo.domain.herencia.Consultor;
 import com.ufostyle.poo.domain.herencia.Empleado;
 import com.ufostyle.poo.domain.herencia.Persona;
@@ -57,12 +57,26 @@ public class PooApplication {
 
 		perso = consul;*/
 
-		Alumno alu1 = new Alumno();
+		/*Alumno alu1 = new Alumno();
 		Alumno alu2 = new Alumno(4, "Manolito Manuel", "Rojas Garcia");
 
 		System.out.println("alumnoId: " + alu2.getAlumnoId());
 		System.out.println("nombres: " + alu2.getNombres());
-		System.out.println("apellidos: " + alu2.getApellidos());
+		System.out.println("apellidos: " + alu2.getApellidos());*/
+
+		Pikachu pikachu = new Pikachu();
+		Charmander charmander = new Charmander();
+		Squirtle squirtle = new Squirtle();
+		Bulbasaur bulbasaur = new Bulbasaur();
+
+		squirtle.atacarAraniazo();
+		squirtle.atacarHidrobomba();
+		charmander.atacarAraniazo();
+		charmander.atacarLanzaLlamas();
+		bulbasaur.atacarAraniazo();
+		bulbasaur.atacarDrenaje();
+		pikachu.atacarAraniazo();
+		pikachu.atacarImpactrueno();
 	}
 
 }
