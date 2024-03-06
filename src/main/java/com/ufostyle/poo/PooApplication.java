@@ -46,7 +46,7 @@ public class PooApplication {
 		consul.getNum_consultor();
 		consul.getNombres();*/
 
-		Persona vector [] = new Persona[5];
+		/*Persona vector [] = new Persona[5];
 		vector [0] = new Persona();
 		vector [1] = new Empleado();
 		vector [2] = new Consultor();
@@ -55,7 +55,14 @@ public class PooApplication {
 		Persona perso = new Persona();
 		Consultor consul = new Consultor();
 
-		perso = consul;
+		perso = consul;*/
+
+		Alumno alu1 = new Alumno();
+		Alumno alu2 = new Alumno(4, "Manolito Manuel", "Rojas Garcia");
+
+		System.out.println("alumnoId: " + alu2.getAlumnoId());
+		System.out.println("nombres: " + alu2.getNombres());
+		System.out.println("apellidos: " + alu2.getApellidos());
 	}
 
 }
