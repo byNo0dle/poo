@@ -7,10 +7,7 @@ import com.ufostyle.poo.domain.polimorfismo.Jefe;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 @SpringBootApplication
 public class PooApplication {
@@ -185,7 +182,7 @@ public class PooApplication {
 		System.out.println("ArrayList: " + listaArray.isEmpty());
 		System.out.println("LinkedList: " + listaLinked.isEmpty());*/
 
-		Stack<Integer> pila = new Stack<Integer>();
+		/*Stack<Integer> pila = new Stack<Integer>();
 
 		System.out.println("Pila vacía: " + pila);
 		System.out.println("Esta vacía? " + pila.isEmpty());
@@ -208,7 +205,30 @@ public class PooApplication {
 
 		pila.pop();	// Eliminar el último registro que entró
 		System.out.println("Está el número 3? " + pila.search(3));
-		System.out.println("Último agregado: " + pila.peek());
+		System.out.println("Último agregado: " + pila.peek());*/
+
+		Map<Integer, String> mapaEmpleados = new HashMap<>();
+		mapaEmpleados.put(2037, "Kevin");
+		mapaEmpleados.put(2038, "Ivan");
+		mapaEmpleados.put(2039, "Fabio");
+
+		/*boolean estaono = mapaEmpleados.containsKey(2038);
+		//boolean estaono = mapaEmpleados.containsValue("Camini");
+
+		if (estaono == true) {
+			System.out.println("El valor buscado está");
+		}
+		else {
+			System.out.println("El valor buscado no existe");
+		}*/
+
+		//System.out.println(mapaEmpleados.values());
+		//System.out.println(mapaEmpleados.keySet());
+
+		//String nombre = mapaEmpleados.get(2039);
+		//System.out.println("El empleado buscado es: " + nombre);
+
+		mapaEmpleados.remove(2037);
 	}
 
 }
