@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 @SpringBootApplication
@@ -80,7 +81,7 @@ public class PooApplication {
 		pikachu.atacarAraniazo();
 		pikachu.atacarImpactrueno();*/
 
-		// Agregar nuevos elementos a una lista.
+		/*// Agregar nuevos elementos a una lista.
 		List<Persona> lista = new ArrayList<Persona>();
 		lista.add(new Persona(1, "Junior Raúl", 29));
 		lista.add(new Persona(2, "Jostin Samuel", 23));
@@ -103,6 +104,23 @@ public class PooApplication {
 		for (int i = 0; i < lista.size(); i++) {
 			System.out.println("Esto es la listaPersona: " + lista.get(i).getNombre());
 		}
+
+		System.out.println("---------------------FOREACH----------------------");
+		// Recorrido foreach
+		for (Persona perso:lista) {
+			System.out.println("Esto es la listaPersona: " + perso.getNombre());
+		}*/
+
+		// Utilizando LinkedList
+		List<Persona> lista = new LinkedList<Persona>();
+		// Agregar personas al final de la lista
+		lista.add(new Persona(1, "Junior Raúl", 29));
+		lista.add(new Persona(2, "Jostin Samuel", 23));
+		lista.add(new Persona(3, "Marco Polo", 25));
+		lista.add(new Persona(4, "Jamer Martín", 20));
+
+		// Agregar al principio
+		lista.add(0, new Persona(5, "Manolito Manuel", 98));
 
 		System.out.println("---------------------FOREACH----------------------");
 		// Recorrido foreach
