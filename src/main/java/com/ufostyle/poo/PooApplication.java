@@ -111,7 +111,7 @@ public class PooApplication {
 			System.out.println("Esto es la listaPersona: " + perso.getNombre());
 		}*/
 
-		// Utilizando LinkedList
+		/*// Utilizando LinkedList
 		List<Persona> lista = new LinkedList<Persona>();
 		// Agregar personas al final de la lista
 		lista.add(new Persona(1, "Junior Raúl", 29));
@@ -126,7 +126,63 @@ public class PooApplication {
 		// Recorrido foreach
 		for (Persona perso:lista) {
 			System.out.println("Esto es la listaPersona: " + perso.getNombre());
+		}*/
+
+		List<Persona> listaArray = new ArrayList<Persona>();
+		listaArray.add(new Persona(1, "Junior Raúl", 29));
+		listaArray.add(new Persona(2, "Jostin Samuel", 23));
+		listaArray.add(new Persona(3, "Marco Polo", 25));
+		listaArray.add(new Persona(4, "Jamer Martín", 20));
+
+		LinkedList<Persona> listaLinked = new LinkedList<Persona>();
+		listaLinked.add(new Persona(1, "Junior Raúl", 29));
+		listaLinked.add(new Persona(2, "Jostin Samuel", 23));
+		listaLinked.add(new Persona(3, "Marco Polo", 25));
+		listaLinked.add(new Persona(4, "Jamer Martín", 20));
+
+		// Remove en ArrayList
+		listaArray.remove(1);
+
+		//Remove en LinkedList
+		String nombreBorrar = "Jostin Samuel";
+		for (Persona persona2 : listaLinked) {
+			if (persona2.getNombre().equals(nombreBorrar)) {
+				listaLinked.remove(persona2);
+				break;	// corto que deje de recorrer
+			}
 		}
+
+		System.out.println("---------- Luego de eliminar ----------");
+		// Recorrido por ForEach
+		System.out.println("------- ArrayList -------");
+		for (Persona persona : listaArray) {
+			System.out.println("Prueba: " + persona.getNombre());
+		}
+
+		System.out.println("---------- LinkedList -----------");
+		for (Persona persona : listaLinked) {
+			System.out.println("Prueba: " + persona.getNombre());
+		}
+
+		// Tamaño Lista
+		System.out.println("--- Que tamaño tienen las listas?? ---");
+		System.out.println("ArrayList: " + listaArray.size());
+		System.out.println("LinkedList: " + listaLinked.size());
+
+		// Obtener primer objeto y ultimo con LinkedList
+		System.out.println("--- Primer y Ultimo objeto (solo para LinkedList) ---");
+		System.out.println("Primero de LinkedList: " + listaLinked.getFirst().toString());
+		System.out.println("Ultimo de LinkedList: " + listaLinked.getLast().toString());
+
+		// Borrar toda la lista
+		System.out.println("------- Borrando listas -------");
+		listaArray.clear();
+		listaLinked.clear();
+
+		// Comprobar si esta vacía
+		System.out.println("----- Esta vacía alguna lista?? -----");
+		System.out.println("ArrayList: " + listaArray.isEmpty());
+		System.out.println("LinkedList: " + listaLinked.isEmpty());
 	}
 
 }
