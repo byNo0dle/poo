@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 @SpringBootApplication
 public class PooApplication {
@@ -140,7 +141,7 @@ public class PooApplication {
 		listaLinked.add(new Persona(3, "Marco Polo", 25));
 		listaLinked.add(new Persona(4, "Jamer Martín", 20));
 
-		// Remove en ArrayList
+		/*// Remove en ArrayList
 		listaArray.remove(1);
 
 		//Remove en LinkedList
@@ -182,7 +183,32 @@ public class PooApplication {
 		// Comprobar si esta vacía
 		System.out.println("----- Esta vacía alguna lista?? -----");
 		System.out.println("ArrayList: " + listaArray.isEmpty());
-		System.out.println("LinkedList: " + listaLinked.isEmpty());
+		System.out.println("LinkedList: " + listaLinked.isEmpty());*/
+
+		Stack<Integer> pila = new Stack<Integer>();
+
+		System.out.println("Pila vacía: " + pila);
+		System.out.println("Esta vacía? " + pila.isEmpty());
+
+		// Agregar
+		pila.push(1);
+		pila.push(2);
+		pila.push(3);
+		pila.push(4);
+		pila.push(5);
+
+		// Recorrido
+		for (Integer pilita : pila) {
+			System.out.println(pilita);
+		}
+
+		// Mostrar
+		System.out.println("Pila: " + pila);
+		System.out.println("Pila está vacía: " + pila.isEmpty());
+
+		pila.pop();	// Eliminar el último registro que entró
+		System.out.println("Está el número 3? " + pila.search(3));
+		System.out.println("Último agregado: " + pila.peek());
 	}
 
 }
