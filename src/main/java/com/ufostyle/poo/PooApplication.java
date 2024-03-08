@@ -3,10 +3,12 @@ package com.ufostyle.poo;
 import com.ufostyle.poo.domain.entities.*;
 import com.ufostyle.poo.domain.herencia.Consultor;
 import com.ufostyle.poo.domain.herencia.Empleado;
-import com.ufostyle.poo.domain.herencia.Persona;
 import com.ufostyle.poo.domain.polimorfismo.Jefe;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootApplication
 public class PooApplication {
@@ -64,7 +66,7 @@ public class PooApplication {
 		System.out.println("nombres: " + alu2.getNombres());
 		System.out.println("apellidos: " + alu2.getApellidos());*/
 
-		Pikachu pikachu = new Pikachu();
+		/*Pikachu pikachu = new Pikachu();
 		Charmander charmander = new Charmander();
 		Squirtle squirtle = new Squirtle();
 		Bulbasaur bulbasaur = new Bulbasaur();
@@ -76,7 +78,37 @@ public class PooApplication {
 		bulbasaur.atacarAraniazo();
 		bulbasaur.atacarDrenaje();
 		pikachu.atacarAraniazo();
-		pikachu.atacarImpactrueno();
+		pikachu.atacarImpactrueno();*/
+
+		// Agregar nuevos elementos a una lista.
+		List<Persona> lista = new ArrayList<Persona>();
+		lista.add(new Persona(1, "Junior Raúl", 29));
+		lista.add(new Persona(2, "Jostin Samuel", 23));
+		lista.add(new Persona(3, "Marco Polo", 25));
+		lista.add(new Persona(4, "Jamer Martín", 20));
+
+		List<Alumno> listaAlumno = new ArrayList<Alumno>();
+		listaAlumno.add(new Alumno(1, "Nick Francis", "Rojas Guerra"));
+		listaAlumno.add(new Alumno(2, "Celia Rosa", "Villacorta Gonzales"));
+		listaAlumno.add(new Alumno(3, "Genezareth Camini", "Vasquez Sabino"));
+		listaAlumno.add(new Alumno(4, "Kevin", "Torres Camacho"));
+
+		List<Animal> listaAnimal = new ArrayList<Animal>();
+		listaAnimal.add(new Animal(1, "Es un perro bajito de color negro"));
+		listaAnimal.add(new Animal(2, "Es un gato color blanco con manchas grises"));
+		listaAnimal.add(new Animal(3, "Es color marron con poco de negro y en su pecho tiene color blanco y come mucho"));
+
+		System.out.println("----------------------FOR---------------------");
+		// Recorrer una lista por índice
+		for (int i = 0; i < lista.size(); i++) {
+			System.out.println("Esto es la listaPersona: " + lista.get(i).getNombre());
+		}
+
+		System.out.println("---------------------FOREACH----------------------");
+		// Recorrido foreach
+		for (Persona perso:lista) {
+			System.out.println("Esto es la listaPersona: " + perso.getNombre());
+		}
 	}
 
 }
