@@ -246,7 +246,7 @@ public class PooApplication {
 			System.out.println("Intentaste acceder a un índice que no existe");
 		}*/
 
-		Auto auto = new Auto();
+		/*Auto auto = new Auto();
 		auto.setAutoId(1L);
 		auto.setMarca("Reanult");
 		auto.setModelo("Duster");
@@ -270,7 +270,41 @@ public class PooApplication {
 		auto.setListaPropietario(listaPropietario);
 
 		System.out.println("El auto " + auto.getMarca() + " " + auto.getModelo() +
-				" tiene como propietario a: " + auto.getListaPropietario().toString());
+				" tiene como propietario a: " + auto.getListaPropietario().toString());*/
+
+		double num = 1.63;
+
+		// Casteo a Entero
+		int numInt = (int) num;
+
+		// Casteo a Long
+		long numLong = (long) num;
+
+		System.out.println("double: " + num);
+		System.out.println("int: " + numInt);
+		System.out.println("long: " + numLong);
+
+		String cantidad = "15";
+		String precio = "123.40";
+
+		// Parseo String a Entero
+		int cantEntero = Integer.parseInt(cantidad);
+
+		// Parseo String a Double
+		double precioDouble = Double.parseDouble(precio);
+
+		System.out.println("El valor total de la compra es: " + (cantEntero * precioDouble));
+
+		int edad = 30;
+		double estatura = 1.63;
+
+		// Convertir Entero a String
+		String edadString = String.valueOf(edad);
+
+		// Convertir Double a String
+		String estaturaString = String.valueOf(estatura);
+
+		System.out.println("Edad: " + edadString + "," + " Estatura: " + estaturaString);
 	}
 
 }
