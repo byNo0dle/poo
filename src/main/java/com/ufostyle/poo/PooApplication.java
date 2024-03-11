@@ -231,7 +231,7 @@ public class PooApplication {
 		//mapaEmpleados.remove(2037);
 
 
-		try {
+		/*try {
 			Integer resultado = 3/0;
 		}
 		catch (Exception exception) {
@@ -244,8 +244,33 @@ public class PooApplication {
 		}
 		catch (Exception exception) {
 			System.out.println("Intentaste acceder a un índice que no existe");
-		}
+		}*/
 
+		Auto auto = new Auto();
+		auto.setAutoId(1L);
+		auto.setMarca("Reanult");
+		auto.setModelo("Duster");
+
+		List<Propietario> listaPropietario = new ArrayList<Propietario>();
+
+		Propietario pro1 = new Propietario();
+		Propietario pro2 = new Propietario();
+
+		pro1.setPropietarioId(30L);
+		pro1.setNombre("Manolo Manuel");
+		pro1.setApellido("Rojas Garcia");
+
+		pro2.setPropietarioId(31L);
+		pro2.setNombre("Kevin");
+		pro2.setApellido("Torres Camacho");
+
+		listaPropietario.add(pro1);
+		listaPropietario.add(pro2);
+
+		auto.setListaPropietario(listaPropietario);
+
+		System.out.println("El auto " + auto.getMarca() + " " + auto.getModelo() +
+				" tiene como propietario a: " + auto.getListaPropietario().toString());
 	}
 
 }
