@@ -126,7 +126,7 @@ public class PooApplication {
 			System.out.println("Esto es la listaPersona: " + perso.getNombre());
 		}*/
 
-		List<Persona> listaArray = new ArrayList<Persona>();
+		/*List<Persona> listaArray = new ArrayList<Persona>();
 		listaArray.add(new Persona(1, "Junior Raúl", 29));
 		listaArray.add(new Persona(2, "Jostin Samuel", 23));
 		listaArray.add(new Persona(3, "Marco Polo", 25));
@@ -136,7 +136,7 @@ public class PooApplication {
 		listaLinked.add(new Persona(1, "Junior Raúl", 29));
 		listaLinked.add(new Persona(2, "Jostin Samuel", 23));
 		listaLinked.add(new Persona(3, "Marco Polo", 25));
-		listaLinked.add(new Persona(4, "Jamer Martín", 20));
+		listaLinked.add(new Persona(4, "Jamer Martín", 20));*/
 
 		/*// Remove en ArrayList
 		listaArray.remove(1);
@@ -207,10 +207,10 @@ public class PooApplication {
 		System.out.println("Está el número 3? " + pila.search(3));
 		System.out.println("Último agregado: " + pila.peek());*/
 
-		Map<Integer, String> mapaEmpleados = new HashMap<>();
+		/*Map<Integer, String> mapaEmpleados = new HashMap<>();
 		mapaEmpleados.put(2037, "Kevin");
 		mapaEmpleados.put(2038, "Ivan");
-		mapaEmpleados.put(2039, "Fabio");
+		mapaEmpleados.put(2039, "Fabio");*/
 
 		/*boolean estaono = mapaEmpleados.containsKey(2038);
 		//boolean estaono = mapaEmpleados.containsValue("Camini");
@@ -228,7 +228,24 @@ public class PooApplication {
 		//String nombre = mapaEmpleados.get(2039);
 		//System.out.println("El empleado buscado es: " + nombre);
 
-		mapaEmpleados.remove(2037);
+		//mapaEmpleados.remove(2037);
+
+
+		try {
+			Integer resultado = 3/0;
+		}
+		catch (Exception exception) {
+			System.out.println("No se puede dividir por cero!!!");
+		}
+
+		Integer edades [] = {10, 20, 30, 40};
+		try {
+			System.out.println("La edad de la posición 4 es: " + edades [4]);
+		}
+		catch (Exception exception) {
+			System.out.println("Intentaste acceder a un índice que no existe");
+		}
+
 	}
 
 }
