@@ -272,7 +272,7 @@ public class PooApplication {
 		System.out.println("El auto " + auto.getMarca() + " " + auto.getModelo() +
 				" tiene como propietario a: " + auto.getListaPropietario().toString());*/
 
-		double num = 1.63;
+		/*double num = 1.63;
 
 		// Casteo a Entero
 		int numInt = (int) num;
@@ -304,7 +304,14 @@ public class PooApplication {
 		// Convertir Double a String
 		String estaturaString = String.valueOf(estatura);
 
-		System.out.println("Edad: " + edadString + "," + " Estatura: " + estaturaString);
+		System.out.println("Edad: " + edadString + "," + " Estatura: " + estaturaString);*/
+
+		Color color = Color.NEGRO;
+		System.out.println("El color es: " + color);
+
+		for (Color c : Color.values()) {
+			System.out.println("El color es: " + c);
+		}
 	}
 
 }
