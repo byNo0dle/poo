@@ -1,10 +1,19 @@
 package com.ufostyle.poo.domain.entities;
 
+import jakarta.persistence.*;
+
+import java.util.Date;
+
+@Entity
 public class Alumno {
 
-  private Integer alumnoId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long alumnoId;
   private String nombres;
   private String apellidos;
+  @Temporal(TemporalType.DATE)
+  private Date fechaNac;
 
   /**
    * Esto es un constructor vacio.
@@ -12,24 +21,18 @@ public class Alumno {
   public Alumno() {
   }
 
-  /**
-   * Esto es un constructor con parametros.
-   *
-   * @param alumnoId
-   * @param nombres
-   * @param apellidos
-   */
-  public Alumno(Integer alumnoId, String nombres, String apellidos) {
+  public Alumno(Long alumnoId, String nombres, String apellidos, Date fechaNac) {
     this.alumnoId = alumnoId;
     this.nombres = nombres;
     this.apellidos = apellidos;
+    this.fechaNac = fechaNac;
   }
 
-  public Integer getAlumnoId() {
+  public Long getAlumnoId() {
     return alumnoId;
   }
 
-  public void setAlumnoId(Integer alumnoId) {
+  public void setAlumnoId(Long alumnoId) {
     this.alumnoId = alumnoId;
   }
 
@@ -47,6 +50,14 @@ public class Alumno {
 
   public void setApellidos(String apellidos) {
     this.apellidos = apellidos;
+  }
+
+  public Date getFechaNac() {
+    return fechaNac;
+  }
+
+  public void setFechaNac(Date fechaNac) {
+    this.fechaNac = fechaNac;
   }
 
   /**
