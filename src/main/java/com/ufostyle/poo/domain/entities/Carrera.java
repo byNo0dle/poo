@@ -1,9 +1,8 @@
 package com.ufostyle.poo.domain.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.LinkedList;
 
 @Entity
 public class Carrera {
@@ -12,13 +11,16 @@ public class Carrera {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long carreraId;
   private String nombre;
+  @OneToMany(mappedBy = "carrera")
+  private LinkedList<Materia> listaMateria;
 
   public Carrera() {
   }
 
-  public Carrera(Long carreraId, String nombre) {
+  public Carrera(Long carreraId, String nombre, LinkedList<Materia> listaMateria) {
     this.carreraId = carreraId;
     this.nombre = nombre;
+    this.listaMateria = listaMateria;
   }
 
   public Long getCarreraId() {
@@ -35,5 +37,13 @@ public class Carrera {
 
   public void setNombre(String nombre) {
     this.nombre = nombre;
+  }
+
+  public LinkedList<Materia> getListaMateria() {
+    return listaMateria;
+  }
+
+  public void setListaMateria(LinkedList<Materia> listaMateria) {
+    this.listaMateria = listaMateria;
   }
 }

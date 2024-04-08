@@ -63,6 +63,14 @@ public class Alumno {
     this.fechaNac = fechaNac;
   }
 
+  public Carrera getCarrera() {
+    return carrera;
+  }
+
+  public void setCarrera(Carrera carrera) {
+    this.carrera = carrera;
+  }
+
   /**
    * Se implemento este método.
    */
