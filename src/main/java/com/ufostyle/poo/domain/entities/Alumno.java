@@ -14,6 +14,8 @@ public class Alumno {
   private String apellidos;
   @Temporal(TemporalType.DATE)
   private Date fechaNac;
+  @OneToOne
+  private Carrera carrera;
 
   /**
    * Esto es un constructor vacio.
@@ -21,11 +23,12 @@ public class Alumno {
   public Alumno() {
   }
 
-  public Alumno(Long alumnoId, String nombres, String apellidos, Date fechaNac) {
+  public Alumno(Long alumnoId, String nombres, String apellidos, Date fechaNac, Carrera carrera) {
     this.alumnoId = alumnoId;
     this.nombres = nombres;
     this.apellidos = apellidos;
     this.fechaNac = fechaNac;
+    this.carrera = carrera;
   }
 
   public Long getAlumnoId() {
